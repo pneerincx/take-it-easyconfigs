@@ -1,5 +1,5 @@
 name = 'NGS_Automated'
-version = '4.5.0'
+version = '4.6.0'
 namelower = name.lower()
 versionsuffix='-bare'
 homepage = 'https://github.com/molgenis/NGS_Automated'
@@ -14,11 +14,11 @@ easyblock = 'Tarball'
 source_urls = [('http://github.com/molgenis/%s/archive/' % (name))]
 sources = [('%s.tar.gz' % (version))]
 
-checksums = ['846f06cffdc582d240f896041efdb86f050be735e6cd315559797c1ffb47858b']
+checksums = ['387a07b5d7e32545626ba33aa132b321c87c7fc46eb9042eda826a37feeefc76']
 
 sanity_check_paths = {
     'files': [
-        'bin/copyRawNanoporeDataToTmp.sh'
+        'bin/startInhouseDragenPipeline.sh'
     ],
     'dirs': [
         'bin/',

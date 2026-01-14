@@ -1,7 +1,7 @@
 easyblock = 'Tarball'
 
 name = 'nf_ngs_dna'
-version = '1.2.0'
+version = '1.4.0'
 namelower = name.lower()
 
 homepage = 'https://github.com/molgenis/nf_ngs_dna'
@@ -14,7 +14,7 @@ toolchain = {'name': 'foss', 'version': '2022a'}
 #
 source_urls = [('http://github.com/molgenis/%s/archive/' % (name))]
 sources = [('%s.tar.gz' % (version))]
-checksums = ['1d2428130f388cf749cb63077c28b85271e5ef1cbc99976fa43e9ffff6495812']
+checksums = ['2f5a60446371740c04f90263ffe711b27554ec4f8db3f40a45796b1c1c27b7dd']
 
 #
 # Dependencies.
@@ -28,7 +28,7 @@ dependencies = [
 
 
 sanity_check_paths = {
-    'files': ['wgs.nf','swgs.nf'],
+    'files': ['workflow_dragen.nf'],
     'dirs': []
 }
 
