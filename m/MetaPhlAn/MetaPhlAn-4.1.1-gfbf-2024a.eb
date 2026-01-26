@@ -1,0 +1,56 @@
+easyblock = 'PythonPackage'
+
+name = 'MetaPhlAn'
+version = '4.1.1'
+
+#
+# Solving sanity check problem:
+#   sanity tries to import module pythonplus, as it thinks it's python module = fail
+# Solution (implemented in 2013)
+#   https://github.com/easybuilders/easybuild-framework/blob/develop/easybuild/framework/extension.py#L204
+#   https://www.mail-archive.com/easybuild@lists.ugent.be/msg06020.html
+#
+options = {'modulename': False,} 
+
+homepage = 'https://github.com/biobakery/MetaPhlAn/'
+description = """MetaPhlAn is a computational tool for species-level microbial profiling
+ (bacteria, archaea, eukaryotes, and viruses) from metagenomic shotgun sequencing data.
+ StrainPhlAn (available within MetaPhlAn) allows strain-level microbial population genomics."""
+
+toolchain = {'name': 'gfbf', 'version': '2024a'}
+toolchainopts = {'pic': True}
+
+dependencies = [
+    ('Python', '3.12.3'),
+    ('Cython', '3.1.2', '-Python-%(pyver)s'),
+    ('numpy', '2.3.2', '-Python-%(pyver)s'),
+    ('Bowtie2', '2.5.4'),
+    ('minimap2', '2.30'),
+]
+
+sources = ['%(name)s-%(version)s-requirements_hashed.txt']
+checksums = [
+    '5f8a05f7ac00f4f81c83ea1ca19ee5d2dd2c873dbecd9c1783ec3afd1d082d90'  # MetaPhlAn-4.1.1-requirements_hashed.txt
+]
+
+pip_ignore_installed = False
+sanity_pip_check = True
+unpack_sources = False
+use_pip = True
+use_pip_for_deps = True
+use_pip_requirement = True
+installopts = '--require-hashes'
+
+#
+# Sanity checking.
+#
+sanity_check_paths = {
+    'files': ['bin/metaphlan'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages']
+}
+ 
+sanity_check_commands = [
+    ('metaphlan --help'),
+]
+
+moduleclass = 'bio'

@@ -16,7 +16,7 @@ source_urls = [('https://github.com/molgenis/%s/archive/' % (name))]
 sources = [('%s.tar.gz' % (version))]
 checksums = ['18a59c3f8d5a69b0ab5f34760f3ae8fb2a5b9603626695b27dfd9d7df06050c8']
 
-executables = [
+local_executables = [
     'GetPerlModuleDepTreeFromCPAN.pl',
     'generateEasyConfig.R',
     'hpc-environment-sync.bash',
@@ -33,7 +33,7 @@ files_to_copy = [
 # We don't really need a command to install depad-utils, 
 # but as we have to have one in order to recycle the CmdCp easyblock... just ls.
 #
-cmds_map = [('.*', "ls -ahl %(source)s")]
+cmds_map = [('.*', "echo 'Skipping install command.'")]
 
 #
 # Make scripts executable.
@@ -48,7 +48,7 @@ postinstallcmds = [
 # Sanity checking.
 #
 sanity_check_paths = {
-    'files': ['README.md'] + ['bin/%s' % x for x in executables],
+    'files': ['README.md'] + ['bin/%s' % x for x in local_executables],
     'dirs': ['bin']
 }
 sanity_check_commands = [('hpc-environment-sync.bash', '-h')]

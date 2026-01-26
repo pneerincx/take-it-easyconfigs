@@ -1,10 +1,10 @@
 name = 'cluster-utils'
-version = 'v24.04.1'
+version = 'v26.01.1'
 
 homepage = 'https://github.com/molgenis/cluster-utils/'
 description = """Utilities for cluster users."""
 
-toolchain = {'name': 'GCCcore', 'version': '11.3.0'}
+toolchain = {'name': 'GCCcore', 'version': '13.3.0'}
 easyblock = 'CmdCp'
 
 #
@@ -13,14 +13,14 @@ easyblock = 'CmdCp'
 #
 source_urls = [('http://github.com/molgenis/%s/archive/' % (name))]
 sources = [('%s.tar.gz' % (version))]
-checksums = ['48b7fabb588f9cf2b8aab91b72398a63f5f254b69e1a93328d65afb1dcc49f26']
+checksums = ['7c6a8c78f5a9607a48a38b6e1c1e81def5d02c6a96194155460235ae4c8d0710']
 
 #
 # Deps.
 #
 dependencies = [
-    ('ncurses', '6.3'),                # For ctop.
-    ('Curses', '1.41', '-Perl-5.34.1') # For ctop.
+    ('ncurses', '6.5'),                # For ctop.
+    ('Curses', '1.45', '-Perl-5.38.2') # For ctop.
 ]
 
 keepsymlinks = True

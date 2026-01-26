@@ -37,7 +37,7 @@ files_to_copy = [
 # We don't really need a command to install, 
 # but as we have to have one in order to recycle the CmdCp easyblock... just ls.
 #
-cmds_map = [('.*', "ls -ahl %(source)s")]
+cmds_map = [('.*', "echo 'Skipping install command.'")]
 
 #
 # Make scripts executable.
