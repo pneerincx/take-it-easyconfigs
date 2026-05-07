@@ -8,7 +8,7 @@ description = """Java Platform, Standard Edition (Java SE) lets you develop and 
  Development Kit (JDK) supplemented with the Java Cryptography Extension (JCE) 
  Unlimited Strength Jurisdiction Policy Files"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 
 # download the tar.gz directly from http://www.oracle.com/technetwork/java/javase/downloads/index.html
 (vp, vs) = version.split('_')

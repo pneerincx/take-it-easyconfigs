@@ -11,20 +11,20 @@ homepage = 'http://cadd.gs.washington.edu/home'
 description = """Tool for scoring the deleteriousness of variants in the human genome."""
 
 #
-# Don't use 'dummy' as toolchain version to make sure dependencies are loaded
-# both at build as well as at runtime. With 'dummy' as toolchain version,
+# Don't use SYSTEM toolchain to make sure dependencies are loaded
+# both at build as well as at runtime.
 # dependencies will only be loaded at runtime.
 #
-#toolchain = {'name': 'dummy', 'version': 'dummy'}
-toolchain = {'name': 'dummy', 'version': ''}
+#toolchain = SYSTEM
+toolchain = SYSTEM
 
 dependencies = [
     ('PerlPlus', '5.22.0', '-v17.01.1', ('foss', '2015b')),
-    ('Mozilla-CA', '20160104', '', ('dummy', 'dummy')),
+    ('Mozilla-CA', '20160104', '', SYSTEM),
     ('PythonPlus', '2.7.10', '-v16.11.1', ('foss', '2015b')),
     ('HTSlib', '1.3.2', '', ('foss', '2015b')),
     ('SAMtools', '1.3.1', '', ('foss', '2015b')),
-    ('VEP', '76', '', ('dummy', '')),
+    ('VEP', '76', '', SYSTEM),
 ]
 
 #

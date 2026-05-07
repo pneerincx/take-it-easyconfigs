@@ -4,7 +4,7 @@ version = '17.08.2'
 homepage = 'https://github.com/molgenis/ngs-utils/'
 description = """Pharmacogenetics script to create a GLIMPs output file using 4 inputfiles (Dropsense | Taqman | Iplex | UGT1A1 )."""
 
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 easyblock = 'CmdCp'
 
 #

@@ -6,7 +6,7 @@ versionsuffix='-bare'
 homepage = 'https://github.com/molgenis/GAP'
 description = """Genotyping Array pipeline used in the UMCG"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 
 #

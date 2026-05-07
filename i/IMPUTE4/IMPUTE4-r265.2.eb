@@ -4,7 +4,7 @@ version = 'r265.2'
 homepage = 'https://jmarchini.org/impute-4/'
 description = """A program for efficient genotype imputation. You need to register to access the software."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'PackedBinary'
 
 source_urls = [('https://jmarchini.org/impute-4/')]

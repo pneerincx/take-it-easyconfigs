@@ -5,12 +5,11 @@ namelower = name.lower()
 homepage = 'https://github.com/molgenis/gavin-plus/releases/'
 description = """This distribution already contains several pipelines/protocols/parameter files which you can use 'out-of-the-box' to align and impute your NGS data using MOLGENIS Compute."""
 #
-# Don't use 'dummy' as toolchain version to make sure dependencies are loaded
-# both at build as well as at runtime. With 'dummy' as toolchain version,
-# dependencies will only be loaded at runtime.
+# Don't use SYSTEM toolchain to make sure dependencies are loaded
+# both at build as well as at runtime.
+# Dependencies will only be loaded at runtime.
 #
-#toolchain = {'name': 'dummy', 'version': 'dummy'}
-toolchain = {'name': 'system', 'version': ''}
+toolchain = SYSTEM
 checksums = ['266343a0edbea8785efd0bb23f26d03b5ba40a04630344515682e646ee22cf85']
 
 easyblock = 'JAR'

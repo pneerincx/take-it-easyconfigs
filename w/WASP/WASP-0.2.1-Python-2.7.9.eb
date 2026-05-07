@@ -6,7 +6,7 @@ version = '0.2.1'
 homepage = 'https://github.com/bmvdgeijn/WASP'
 description = """allele-specific pipeline for unbiased read mapping and molecular QTL discovery"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 
 #
 # Example URL: https://github.com/bmvdgeijn/WASP/archive/v0.2.1.tar.gz

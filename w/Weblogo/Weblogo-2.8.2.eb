@@ -7,7 +7,7 @@ homepage = 'http://weblogo.berkeley.edu/logo.cgi'
 description = """WebLogo is a web based application designed to make the generation of sequence logos as easy and 
  painless as possible. Click here to create your own sequence logos."""
 
-toolchain = {'name':'dummy', 'version':'dummy'}
+toolchain = SYSTEM
 
 source_urls = ['http://weblogo.berkeley.edu/release/']
 sources = ['weblogo.%(version)s.tar.gz']

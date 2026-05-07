@@ -5,7 +5,7 @@ homepage = 'https://github.com/molgenis/ngs-utils'
 description = """This distribution contains several pipelines/protocols/parameter files,
 which you can use 'out-of-the-box' to align and impute your NGS data using MOLGENIS Compute."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'PackedBinary'
 
 #

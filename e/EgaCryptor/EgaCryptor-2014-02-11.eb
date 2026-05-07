@@ -13,12 +13,11 @@ produce EGA compliant files by encrypting each file to be submitted and
 generating the encrypted and unencrypted md5sum for each file."""
 
 #
-# Don't use 'dummy' as toolchain version to make sure dependencies are loaded
-# both at build as well as at runtime. With 'dummy' as toolchain version,
-# dependencies will only be loaded at runtime.
+# Don't use SYSTEM toolchain to make sure dependencies are loaded
+# both at build as well as at runtime.
+# Dependencies will only be loaded at runtime.
 #
-#toolchain = {'name': 'dummy', 'version': 'dummy'}
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 
 dependencies = [
     ('Java', '1.8.0_144', '-unlimited_JCE'),

@@ -4,7 +4,7 @@ version = '15-Nov-2016'
 homepage = 'http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/'
 description = """Convert wig to bigwig"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Binary'
 
 # http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/wigToBigWig

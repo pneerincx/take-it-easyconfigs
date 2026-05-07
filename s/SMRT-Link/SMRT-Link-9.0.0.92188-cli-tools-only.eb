@@ -10,7 +10,7 @@ description = """PacBio’s open-source SMRT Analysis software suite is designed
  or command-line interface. You can also integrate SMRT Analysis in your existing data workflow through 
  the extensive set of APIs provided"""
 
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 
 source_urls = [('https://downloads.pacbcloud.com/public/software/installers/')]
 sources = [('smrtlink_%s.zip' % (version))]

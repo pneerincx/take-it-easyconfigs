@@ -5,7 +5,7 @@ namelower = name.lower()
 homepage = 'http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/'
 description = """LiftOver Tool from one Genomebuild to another."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Binary'
 
 #

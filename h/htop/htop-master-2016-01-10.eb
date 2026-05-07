@@ -6,7 +6,7 @@ description = """An interactive, ncursus-based process viewer by Hisham Muhammad
 
 easyblock = 'ConfigureMake'
 #toolchain = {'name': 'foss', 'version': '2015b'}
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 
 #
 # Complete example URL: https://github.com/hishamhm/htop/archive/fc61e25f5b169723e1444e66eef265d7281f18ee.zip

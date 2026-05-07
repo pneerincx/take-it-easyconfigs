@@ -5,7 +5,7 @@ namelower = name.lower()
 homepage = 'https://atgu.mgh.harvard.edu/plinkseq/download.shtml'
 description = """This site contains several downloads of PLINK/SEQ, a library for the analysis of genetic variation data"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 
 
