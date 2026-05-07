@@ -19,9 +19,6 @@ dependencies = [
     ('PythonPlus', '3.10.4', '-v23.01.1'),
 ]
 
-
-#checksums = ['7ca486cc959eaca44ed38cc4df2732eeaf408f1cc8ad56cbf7be084a076d517e']
-
 #
 # This is a bundle of extra Python packages to be used with a "bare" Python installation.
 #
@@ -38,8 +35,10 @@ exts_list = [
 ('chronqc', version, {
         'source_urls': ['https://github.com/nilesh-tawari/ChronQC/archive/'],
         'source_tmpl': '%(version)s.tar.gz',
+        'patches': ['chronqc-1.0.4.patch'],
         'checksums': [
             '174dd35fc6a4718188999d4b79305b4c', # chronqc-1.0.4.tar.gz
+            '7d63a057fc940754a83bbbad3ee32d32a56047bc703ffb18e554a07a6b2a2304', # chronqc-1.0.4.patch
         ],
     }),
 ]

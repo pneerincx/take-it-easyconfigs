@@ -1,0 +1,39 @@
+easyblock = 'PythonPackage'
+
+name = 'numpy'
+version = '2.3.2'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://numpy.org//'
+description = """NumPy is an open source project that enables numerical computing with Python."""
+
+toolchain = {'name': 'gfbf', 'version': '2024a'}
+toolchainopts = {'pic': True}
+
+dependencies = [
+    ('Python', '3.12.3'),
+]
+
+sources = ['%(name)s-%(version)s-requirements_hashed.txt']
+checksums = [
+    '4f2d26b21f94b432a3d3e04cb9f5ca9d3407ae184048b2cb879bdd8f669919db'  #  numpy-2.3.2-requirements_hashed.txt
+]
+
+pip_ignore_installed = False
+sanity_pip_check = True
+unpack_sources = False
+use_pip = True
+use_pip_for_deps = True
+use_pip_requirement = True
+installopts = '--require-hashes'
+
+#
+# Sanity checking.
+#
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages']
+}
+
+moduleclass = 'lang'
+

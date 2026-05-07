@@ -1,0 +1,42 @@
+easyblock = 'Tarball'
+
+name = 'VirtualBaby'
+version = 'v1.2'
+versionsuffix = '-Python-3.10.4'
+
+homepage = 'N/A'
+description = """N/A"""
+
+toolchain = SYSTEM
+
+#
+# Not available for download.
+#
+#source_urls = ['N/A']
+sources = ['%(name)s-%(version)s.tar.gz']
+checksums = [
+    '4274863611942092d8543e981d9c253df955d8c9d0d9836386aed386d5114d5e',  # VirtualBaby-v1.2.tar.gz
+]
+
+dependencies = [
+    ('Python', '3.10.4', '', ('GCCcore', '11.3.0')),
+    ('BCFtools', '1.19', '', ('GCCcore', '11.3.0')),
+]
+
+#
+# Make Python script executable.
+#
+postinstallcmds = [
+    'chmod 755 %(installdir)s/%(name)s',
+]
+
+sanity_check_paths = {
+    'files': ['VirtualBaby'],
+    'dirs': [''],
+}
+sanity_check_commands = [
+    ('VirtualBaby', '--help')
+]
+
+moduleclass = 'bio'
+modextrapaths = {'PATH': ''}

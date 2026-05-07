@@ -1,0 +1,29 @@
+name = 'Trendanalysis'
+version = '2.0.0'
+namelower = name.lower()
+homepage = 'https://github.com/molgenis/Trendanalysis'
+description = """Various scripts to automate the generation of Trendanalysis reports containing various diagnostic QC values over time."""
+
+toolchain = SYSTEM
+easyblock = 'Tarball'
+
+#
+# Example URL: https://github.com/molgenis/Trendanalysis/archive/1.0.1.tar.gz
+# 
+source_urls = [('http://github.com/molgenis/%s/archive/' % (name))]
+sources = [('%s.tar.gz' % (version))]
+
+checksums = ['f0f6cd7f51d7f2094a4893d093cb0b60c5e763c438fce915869c636e9bf1200e']
+
+sanity_check_paths = {
+    'files': [
+        'bin/trendAnalyse.sh'
+    ],
+    'dirs': [
+        'bin/',
+        'lib',
+    ]
+}
+
+moduleclass = 'bio'
+

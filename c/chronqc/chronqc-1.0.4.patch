@@ -6,7 +6,7 @@ diff -ru ChronQC-1.0.4.original/setup.py ChronQC-1.0.4.patched/setup.py
  
  requirements = [
 -     'numpy', 'pandas>=0.20.2', 'matplotlib', 'bottle'
-+     'numpy', 'pandas>=0.20.2', 'matplotlib', 'bottle==0.12.13'
++     'numpy==1.24.1', 'pandas==1.5.2', 'matplotlib==3.6.2', 'bottle==0.12.23'
  ]
  
  test_requirements = [

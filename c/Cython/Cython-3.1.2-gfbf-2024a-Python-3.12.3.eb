@@ -1,0 +1,39 @@
+easyblock = 'PythonPackage'
+
+name = 'Cython'
+version = '3.1.2'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://cython.org/'
+description = """Cython is an optimising static compiler for both the Python programming
+language and the extended Cython programming language (based on Pyrex)."""
+
+toolchain = {'name': 'gfbf', 'version': '2024a'}
+toolchainopts = {'pic': True}
+
+dependencies = [
+    ('Python', '3.12.3'),
+]
+
+sources = ['%(name)s-%(version)s-requirements_hashed.txt']
+checksums = [
+    'c7dd344b82df8d022fb1e2da56b803524e4a493c00d3181de6d577c1e0c68e00'  # Cython-3.1.2-requirements_hashed.txt
+]
+
+pip_ignore_installed = False
+sanity_pip_check = True
+unpack_sources = False
+use_pip = True
+use_pip_for_deps = True
+use_pip_requirement = True
+installopts = '--require-hashes'
+
+#
+# Sanity checking.
+#
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages']
+}
+
+moduleclass = 'lang'

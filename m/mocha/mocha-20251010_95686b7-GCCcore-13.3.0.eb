@@ -1,0 +1,59 @@
+easyblock = 'ConfigureMake'
+
+name = 'mocha'
+_local_bcftools_version = '1.22'
+_local_mocha_hash = '95686b7b65f53a490513be76bb120e5fc20a8bcf'
+version = '20251010_' + _local_mocha_hash[0:7]
+
+homepage = 'https://github.com/freeseek/mocha'
+
+description = """Plugins for BCFtools to call mosaic chromosomal alterations starting from phased VCF files 
+with either B Allele Frequency (BAF) and Log R Ratio (LRR) or allelic depth (AD).
+"""
+
+toolchain = {'name': 'GCCcore', 'version': '13.3.0'}
+
+sources = [{
+    'source_urls': ['https://github.com/samtools/bcftools/releases/download/%s/' % (_local_bcftools_version)],
+    'filename': 'bcftools-%s.tar.bz2' % (_local_bcftools_version),
+},{
+    'source_urls': ['https://github.com/freeseek/mocha/archive/'],
+    'download_filename': '%s.tar.gz' % (_local_mocha_hash),
+    'filename': '%(name)s-%(version)s.tar.gz',
+    'extract_cmd': 'tar -xvzf %s && mv mocha-*/*.{c,h} bcftools-*/plugins/',
+}]
+checksums = [
+    'f2ab9e2f605b1203a7e9cbfb0a3eb7689322297f8c34b45dc5237fe57d98489f', #  bcftools-1.22.tar.bz2
+    '4eaebef2b33d5569372bebfee6e52f292e7f781b313e19c91c7e4c9b5e3a87a5', #  mocha-(_local_mocha_hash).tar.gz
+]
+
+builddependencies = [
+    ('binutils', '2.42'),
+]
+
+dependencies = [
+    ('BCFtools', '%s' % (_local_bcftools_version)), # Make sure runtime BCFtools version is in sync with the one fetched from GitHub to compile gtc2vcf.
+]
+
+#
+# Copy compiled shared libs to plugins dir that can be used with existing BCFtoools module.
+#
+install_cmd  = "mkdir -p %(installdir)s/libexec/bcftools/ && "
+install_cmd += "mkdir -p %(installdir)s/bin/ && "
+install_cmd += "cp -a %(builddir)s/bcftools-*/plugins/{fill-tags,fixploidy,mocha,mochatools,extendFMT}.so %(installdir)s/libexec/bcftools/ && "
+install_cmd += "cp -a %(builddir)s/mocha-*/*_plot.R %(installdir)s/bin/ && "
+install_cmd += "cp -a %(builddir)s/mocha-*/{LICENSE,README.md} %(installdir)s/"
+
+sanity_check_paths = {
+    'files': ['LICENSE', 'bin/mocha_plot.R', 'bin/summary_plot.R']
+             + ['libexec/bcftools/extendFMT.%s' % SHLIB_EXT]
+             + ['libexec/bcftools/fill-tags.%s' % SHLIB_EXT]
+             + ['libexec/bcftools/fixploidy.%s' % SHLIB_EXT]
+             + ['libexec/bcftools/mocha.%s' % SHLIB_EXT]
+             + ['libexec/bcftools/mochatools.%s' % SHLIB_EXT],
+    'dirs': ['bin', 'libexec/bcftools'],
+}
+
+modextrapaths = {'BCFTOOLS_PLUGINS': ['libexec/bcftools/']}
+moduleclass = 'bio'
+

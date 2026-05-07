@@ -4,7 +4,7 @@ name = 'FastQC'
 version = '0.11.7'
 versionsuffix = '-Java-%(javaver)s'
 
-homepage = 'http://www.bioinformatics.babraham.ac.uk/projects/fastqc/'
+homepage = 'https://www.bioinformatics.babraham.ac.uk/projects/fastqc/'
 description = """FastQC is a quality control application for high throughput sequence data.
  It reads in sequence data in a variety of formats and can either provide an interactive
  application to review the results of several different QC checks, or create an HTML based
@@ -12,7 +12,7 @@ description = """FastQC is a quality control application for high throughput seq
 
 toolchain = {'name': 'dummy', 'version': ''}
 
-source_urls = ['http://www.bioinformatics.babraham.ac.uk/projects/%(namelower)s']
+source_urls = ['https://www.bioinformatics.babraham.ac.uk/projects/%(namelower)s']
 sources = ['%(namelower)s_v%(version)s.zip']
 checksums = [
     '59cf50876bbe5f363442eb989e43ae3eaab8d932c49e8cff2c1a1898dd721112',  # fastqc_v0.11.7.zip

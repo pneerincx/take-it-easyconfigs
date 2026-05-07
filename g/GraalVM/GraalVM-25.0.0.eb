@@ -1,0 +1,25 @@
+easyblock = 'PackedBinary'
+
+name = 'GraalVM'
+version = '25.0.0'
+
+homepage = 'https://www.graalvm.org'
+description = 'High-performance Java Development Kit (JDK) that enables ahead-of-time (AOT) compilation and polyglot application support for faster startup and lower runtime overhead.'
+
+toolchain = SYSTEM
+
+source_urls = ['https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-%(version)s/']
+sources = ['graalvm-community-jdk-%(version)s_linux-x64_bin.tar.gz']
+checksums = ['1862f2ce97387a303cae4c512cb21baf36fafd2457c3cbbc10d87db94b89d3dd']
+
+sanity_check_paths = {
+    'files': ['bin/java', 'bin/javac'],
+    'dirs': ['lib'],
+}
+sanity_check_commands = ['java -help', 'javac -help']
+
+modextravars = {
+    'JAVA_HOME': '%(installdir)s'
+}
+
+moduleclass = 'lang'

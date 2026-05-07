@@ -1,0 +1,35 @@
+easyblock = 'Tarball'
+
+name = 'vip'
+version = 'v8.4.0'
+
+homepage = 'https://vip.molgeniscloud.org/'
+description = """Variant Interpretation Pipeline"""
+
+toolchain = {'name': 'system', 'version': ''}
+
+dependencies = [
+    ('Java', '21-LTS'),
+]
+
+#
+# run VIP installer
+#
+postinstallcmds = [
+    'curl -sSL https://raw.githubusercontent.com/molgenis/%(name)s/refs/tags/%(version)s/install.sh | VIP_DIR="/apps/software/%(name)s/%(version)s" VIP_DIR_DATA="/apps/data/%(name)s" bash',
+    '(cd /apps/software/%(name)s/%(version)s && ln --symbolic "vip.sh" "vip")',
+]
+
+sanity_check_paths = {
+    'files': ['vip.sh', 'vip'],
+    'dirs': ['/apps/data/%(name)s/resources', '/apps/data/%(name)s/images']
+}
+
+modextravars={
+    'VIP_DIR': '/apps/software/%(name)s/%(version)s',
+    'VIP_DIR_DATA': '/apps/data/%(name)s'
+}
+
+modextrapaths = {'PATH': '.'}
+
+moduleclass = 'bio'

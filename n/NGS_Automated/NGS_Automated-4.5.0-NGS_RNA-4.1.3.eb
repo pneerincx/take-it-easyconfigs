@@ -1,0 +1,18 @@
+name = 'NGS_Automated'
+version = '4.5.0'
+namelower = name.lower()
+versionsuffix = "-NGS_RNA-4.1.3"
+
+homepage = 'https://github.com/molgenis/NGS_Automated'
+description = """Various scripts to automate the NGS pipelines implemented in the MOLGENIS Compute framework."""
+
+toolchain = SYSTEM
+easyblock = 'Bundle'
+
+dependencies = [
+    ('NGS_RNA', '4.1.3','',('foss','2022a')),
+    ('NGS_Automated', '4.5.0','-bare'),
+    ('hashdeep', '4.4-20180907-18a6b5d','', ('GCCcore','11.3.0'))
+]
+
+moduleclass = 'bio'

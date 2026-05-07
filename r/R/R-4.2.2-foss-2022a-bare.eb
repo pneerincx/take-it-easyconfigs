@@ -52,6 +52,12 @@ dependencies = [
 
 #osdependencies = [OS_PKG_OPENSSL_DEV]
 
+#
+# Add the standard math library to FLIBS for R packages with Fortran code (e.g. mclust, quantreg and waveslim)
+# to avoid "Error: package or namespace load failed" due to "undefined symbols".
+#
+preconfigopts = 'export FLIBS="$FLIBS -lm" && '
+
 configopts = '--with-pic --enable-threads --enable-R-shlib'
 #
 # Bare R version. Additional packages go into RPlus.

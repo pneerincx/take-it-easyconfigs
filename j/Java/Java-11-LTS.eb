@@ -8,7 +8,7 @@ homepage = 'http://java.com/'
 description = """Java Platform, Standard Edition (Java SE) lets you develop and deploy
  Java applications on desktops and servers."""
 
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 
 dependencies = [('AdoptOpenJDK', '%(version)s.0.4_11', '-hotspot')]
 

@@ -1,4 +1,4 @@
-easyblock = 'Bundle'
+easyblock = 'ModuleRC'
 
 name = 'Java'
 version = '21'
@@ -10,6 +10,6 @@ description = """Java Platform, Standard Edition (Java SE) lets you develop and 
 
 toolchain = SYSTEM
 
-dependencies = [('Java', '%(version)s.0.5')]
+dependencies = [('Java', '%(version)s.0.7')]
 
 moduleclass = 'lang'

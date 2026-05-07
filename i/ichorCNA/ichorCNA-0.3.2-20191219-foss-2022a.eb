@@ -1,0 +1,258 @@
+#
+# This EasyBuild config file for RPlus was generated with generateEasyConfig.R
+#
+easyblock = 'Bundle'
+name = 'ichorCNA'
+local_commit = '5bfc03ed854f0e93fe5b624c97c1290fa0053837'
+version = '0.3.2-20191219'
+github_account = 'broadinstitute'
+
+homepage = 'https://github.com/broadinstitute/ichorCNA/wiki'
+description = """ichorCNA is a tool for estimating the fraction of tumor in cell-free DNA
+from ultra-low-pass whole genome sequencing."""
+moduleclass = 'bio'
+modextrapaths = {
+    'R_LIBS': ['library/', ''],
+    'PATH': ['./ichorCNA/bin/']
+}
+
+toolchain = {'name': 'foss', 'version': '2022a'}
+
+dependencies = [
+    ('R', '4.4.0', '-bare')
+]
+
+#
+# The '.' is a silly workaround to check for whatever current dir as workaround
+# until an updated RPackage is available, which installs extension R packages in a library subdir.
+#
+sanity_check_paths = {
+    'files': [],
+    'dirs': [('library', '.')],
+}
+
+local_package_name_tmpl = '%(name)s_%(version)s.tar.gz'
+exts_defaultclass = 'RPackage'
+exts_filter = ('R -q --no-save', 'library(%(ext_name)s)')
+
+local_cran_options = {
+    'source_urls': [
+        'http://cran.r-project.org/src/contrib/',
+        'http://cran.r-project.org/src/contrib/Archive/%(name)s',
+    ]
+}
+local_bioconductor_options = {
+    'source_urls': [
+        'http://www.bioconductor.org/packages/release/bioc/src/contrib/',
+        'http://www.bioconductor.org/packages/release/data/annotation/src/contrib/',
+        'http://www.bioconductor.org/packages/release/data/experiment/src/contrib/',
+        'http://www.bioconductor.org/packages/release/extra/src/contrib/',
+        'http://bioconductor.org/packages/3.20/bioc/src/contrib/',
+        'http://bioconductor.org/packages/3.20/data/annotation/src/contrib/',
+        'http://bioconductor.org/packages/3.20/data/experiment/src/contrib/',
+        'http://bioconductor.org/packages/3.20/workflows/src/contrib/',
+        'http://bioconductor.org/packages/3.20/books/src/contrib/',
+        'http://bioconductor.org/packages/3.20/bioc/src/contrib/Archive/%(name)s/',
+        'http://bioconductor.org/packages/3.20/data/annotation/src/contrib/Archive/%(name)s/',
+        'http://bioconductor.org/packages/3.20/data/experiment/src/contrib/Archive/%(name)s/',
+        'http://bioconductor.org/packages/3.20/workflows/src/contrib/Archive/%(name)s/',
+        'http://bioconductor.org/packages/3.20/books/src/contrib/Archive/%(name)s/',
+    ]
+}
+
+#
+# R package list.
+#   * Order of packages is important!
+#   * Packages should be specified with fixed versions!
+#
+exts_list = [
+    ('sys', '3.4.3', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['051e7332e3074db826efef9059067721864f9d70adc55bbcae3a72e5ae83913a'],
+    }),
+    ('askpass', '1.2.1', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['6c2106a74c44a748f2cea795d9686e27a0058a90debcfd8558b62b06aec0c7dd'],
+    }),
+    ('BiocGenerics', '0.52.0', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_bioconductor_options['source_urls'],
+        'checksums': ['14f56a8d34dc2c005a8f07711cef22321eba92bfc5548853e8fcec03565e7fd9'],
+    }),
+    ('BiocManager', '1.30.25', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['83ef8b57dcc7350fe1e8c62590a60d3ad3e1f9c8660930c946b20340a4a81e15'],
+    }),
+    ('BiocVersion', '3.20.0', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_bioconductor_options['source_urls'],
+        'checksums': ['9de14e40e3f085da92bc9f375ee6e1a81b8676b43882a45a3abf84faf94db6c7'],
+    }),
+    ('cli', '3.6.5', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['8ebe3146e66a285d8ad6ddcff87e2a9790ea7c9cdfce7fdd8bf13095fa459679'],
+    }),
+    ('curl', '6.2.2', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['ad17ddb072cfb8eac5b309824a637e79274747c7f2779f248191f2e1d276dc39'],
+    }),
+    ('data.table', '1.17.2', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['014037d829c9bebf1ef91f73fcffdb7349196893d1c3eef5bfc71a3e679f1c5b'],
+    }),
+    ('S4Vectors', '0.44.0', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_bioconductor_options['source_urls'],
+        'checksums': ['34aa8f96c07506fd3157d6b9af8bf2796a24fbf4265105b556d10b12b3252c72'],
+    }),
+    ('IRanges', '2.40.1', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_bioconductor_options['source_urls'],
+        'checksums': ['9ae03baf196f745f3361d00813b2b23018a48805c7c49ad98e091d7eac91c8fa'],
+    }),
+    ('jsonlite', '2.0.0', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d'],
+    }),
+    ('mime', '0.13', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['7132834cf3c3388eff12bad376d69fbcf8275acc37d36c290e59174fe3c7f3eb'],
+    }),
+    ('openssl', '2.3.2', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['9925ca6abc3c55809322e12458a15c49cccc01b85f9cac9475a64e9d1e6584db'],
+    }),
+    ('R6', '2.6.1', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['59c6eba8b1b912eb7e104f65053235604be853425ee67c152ac4e86a1f2073b4'],
+    }),
+    ('httr', '1.4.7', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['1555e6c2fb67bd38ff11b479f74aa287b2d93f4add487aec53b836ff07de3a3a'],
+    }),
+    ('UCSC.utils', '1.2.0', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_bioconductor_options['source_urls'],
+        'checksums': ['c45c98fa6391dcfb13b58196dfcc26c10a670a44721839cb526ad7f03956de92'],
+    }),
+    ('GenomeInfoDbData', '1.2.13', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_bioconductor_options['source_urls'],
+        'checksums': ['51a33c432e65261ef81a7c2039b17cbdf7a0b417376fdb7ada4d618566f7074e'],
+    }),
+    ('GenomeInfoDb', '1.42.3', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_bioconductor_options['source_urls'],
+        'checksums': ['b4a2563243baec017d37b285649eb5fe5e3c07f2a826dc6003ed7aae5f9b9b2e'],
+    }),
+    ('zlibbioc', '1.52.0', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_bioconductor_options['source_urls'],
+        'checksums': ['dfb69c584fda322ae8b9faed8e011b7f604dfd76f65acdc461a7c8ddca3be15b'],
+    }),
+    ('XVector', '0.46.0', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_bioconductor_options['source_urls'],
+        'checksums': ['ce261b3fda9a7ca809bdd2b92a8550de7ec9a3fd6153dc5358e12453d5d6f636'],
+    }),
+    ('GenomicRanges', '1.58.0', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_bioconductor_options['source_urls'],
+        'checksums': ['10c8c13bacc3cf36fa70bc0f58916b97da36381811dac361a062a2f58a958cc5'],
+    }),
+    ('getopt', '1.20.4', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['87d36cbe6dba41dbc1d78d845210266cdd08c7440d977d738a6e45db14221e8b'],
+    }),
+    ('glue', '1.8.0', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['c86f364ba899b8662f5da3e1a75f43ae081ab04e0d51171d052356e7ee4b72a0'],
+    }),
+    ('HMMcopy', '1.48.0', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_bioconductor_options['source_urls'],
+        'checksums': ['653ecab206c0ce15ff5e096d702ed5010b0d55782a8befdd438441cbc4eb3099'],
+    }),
+    ('rlang', '1.1.6', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['18544c876f4e18ec554edecc308362a52fbc7e0805c4794cf59bcc4d0b57f330'],
+    }),
+    ('lifecycle', '1.0.4', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['ada4d3c7e84b0c93105e888647c5754219a8334f6e1f82d5afaf83d4855b91cc'],
+    }),
+    ('logging', '0.10-108', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['85c91aa5a313f5f9fbb0394cda3f924a2495cca3cc5cd68dde0695fe3c20ed8d'],
+    }),
+    ('magrittr', '2.0.3', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['a2bff83f792a1acb801bfe6330bb62724c74d5308832f2cb6a6178336ace55d2'],
+    }),
+    ('optparse', '1.7.5', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['0cc917505780786e69b8ceca4b3840ed7b0c011495108ec05af3871965415712'],
+    }),
+    ('Rcpp', '1.0.14', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['74e84a52efb0e3e2713cdbbef5234b5ae1d44b33d32c3c337993e7fc423a8002'],
+    }),
+    ('plyr', '1.8.9', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['15b5e7f711d53bf41b8687923983b8ef424563aa2f74c5195feb5b1df1aee103'],
+    }),
+    ('stringi', '1.8.7', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['0526decdcd41b7c42278aca96945394c2cb66ba6fdd47fd917b5d3d38ed5c8c6'],
+    }),
+    ('vctrs', '0.6.5', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['43167d2248fd699594044b5c8f1dbb7ed163f2d64761e08ba805b04e7ec8e402'],
+    }),
+    ('stringr', '1.5.1', {
+        'source_tmpl': local_package_name_tmpl,
+        'source_urls': local_cran_options['source_urls'],
+        'checksums': ['a4adec51bb3f04214b1d8ef40d3a58949f21b1497cbeaf2ba552e0891eef45de'],
+    }),
+    (name, version, {
+        'sources': [{
+            'download_filename': '%s.tar.gz' % local_commit,
+            'filename': '%s-%s.tar.gz' % (name, local_commit),
+        }],
+        'source_urls': [GITHUB_SOURCE],
+        'patches': ['ichorCNA-0.3.2-20191219.patch'],
+        'checksums': [
+            '38dbee4f4127fc27c4bd51fe3d99cb9eebea6fa9a15463127384923c217f1d74',
+            '07497b59047328a485844f13af374a1392581325877d31e9f4dcad4d19ee24f6'  # ichorCNA-0.3.2-20191219.patch
+        ],
+        'preinstallopts': 'mv -v %(builddir)s/%(name)s/%(name)s-*/scripts %(builddir)s/%(name)s/%(name)s-*/inst/ && ',
+    })
+]
+
+postinstallcmds = [
+    'mkdir -p %(installdir)s/ichorCNA/bin',
+    "cd %(installdir)s/ichorCNA/bin && find ../scripts -name '*.R' -exec ln -s {} \;",
+    'chmod a+x %(installdir)s/ichorCNA/bin/*.R'
+]

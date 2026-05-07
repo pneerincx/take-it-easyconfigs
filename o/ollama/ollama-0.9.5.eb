@@ -1,0 +1,32 @@
+easyblock = 'Binary'
+
+name = 'ollama'
+version = '0.9.5'
+
+homepage = 'https://github.com/ollama/ollama'
+description = 'Ollama is a software platform that allows you to run and interact with large language models (LLMs) locally on your own computer, without needing to rely on cloud services. It makes using models like LLaMA, Mistral, Gemma, and others as simple as running a command-line tool or using a REST API.'
+
+toolchain = SYSTEM
+
+source_urls = ['https://github.com/ollama/ollama/releases/download/v%(version)s']
+sources = ['ollama-linux-amd64.tgz']
+checksums = ['c962c3cab36c687ea528fc6af630931aa0a7e78777061ed08085c3848bab1db4']
+
+extract_sources = True
+
+skipsteps = ['configure', 'build']
+
+install_cmds = [
+  'cp -r %(builddir)s/* %(installdir)s/',
+]
+
+sanity_check_paths = {
+    'files': ['bin/ollama'],
+    'dirs': ['bin', 'lib'],
+}
+
+sanity_check_commands = [
+    'bin/ollama -v'
+]
+
+moduleclass = 'ai'

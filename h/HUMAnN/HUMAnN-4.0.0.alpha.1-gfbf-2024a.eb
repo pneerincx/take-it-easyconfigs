@@ -1,0 +1,59 @@
+easyblock = 'PythonPackage'
+
+name = 'HUMAnN'
+version = '4.0.0.alpha.1'
+
+#
+# Solving sanity check problem:
+#   sanity tries to import module pythonplus, as it thinks it's python module = fail
+# Solution (implemented in 2013)
+#   https://github.com/easybuilders/easybuild-framework/blob/develop/easybuild/framework/extension.py#L204
+#   https://www.mail-archive.com/easybuild@lists.ugent.be/msg06020.html
+#
+options = {'modulename': False,} 
+
+homepage = 'https://github.com/biobakery/humann/'
+description = """A pipeline for profiling the presence/absence and abundance of microbial pathways
+ in a community from metagenomic or metatranscriptomic sequencing data."""
+
+toolchain = {'name': 'gfbf', 'version': '2024a'}
+toolchainopts = {'pic': True}
+
+dependencies = [
+    ('Python', '3.12.3'),
+    ('Cython', '3.1.2', '-Python-%(pyver)s'),
+    ('numpy', '2.3.2', '-Python-%(pyver)s'),
+    ('Bowtie2', '2.5.4'),
+    ('MetaPhlAn', '4.1.1'),
+    ('DIAMOND', '2.1.13'),
+    ('MinPath', '1.6'),
+    # ('Xipe', ''), source code no longer available online
+    ('SAMtools', '1.21'),
+]
+
+sources = ['%(name)s-%(version)s-requirements_hashed.txt']
+checksums = [
+    '70bd42b1d7416d59eda4e5a6f3226033b904a52688ac75fd9095865c640089a2'  # HUMAnN-4.0.0.alpha.1-requirements_hashed.txt
+]
+
+pip_ignore_installed = False
+sanity_pip_check = True
+unpack_sources = False
+use_pip = True
+use_pip_for_deps = True
+use_pip_requirement = True
+installopts = '--require-hashes'
+
+#
+# Sanity checking.
+#
+sanity_check_paths = {
+    'files': ['bin/humann'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages']
+}
+ 
+sanity_check_commands = [
+    ('humann --help'),
+]
+
+moduleclass = 'bio'

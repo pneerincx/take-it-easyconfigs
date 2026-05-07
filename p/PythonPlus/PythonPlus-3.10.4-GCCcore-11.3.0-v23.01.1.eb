@@ -1,5 +1,4 @@
 easyblock = 'PythonPackage'
-#easyblock = 'PythonPackage'
 
 name = 'PythonPlus'
 version = '3.10.4'            # Same as the vanilla Python module on which these add-on modules depend.
@@ -31,8 +30,9 @@ dependencies = [
 
 # make sure they do not involve pip or setuptools as those two should be
 # alredy included in python core
-sources = ['%(name)s-%(version)s-GCCcore-11.3.0%(versionsuffix)s-requirements.txt']
-checksums = ['7b23d9ea3eee0e3e78afdc0e658e2ec58f916789b4b7f5546603b4a3b65f42aa']
+sources = ['%(name)s-%(version)s-GCCcore-11.3.0%(versionsuffix)s-requirements_hashes.txt']
+checksums = ['a99809d45736c064209a318476b3bad658d179bf855fede3d984e8343a1f1117']
+
 
 pip_ignore_installed = False
 sanity_pip_check = True
@@ -40,7 +40,7 @@ unpack_sources = False
 use_pip = True
 use_pip_for_deps = True
 use_pip_requirement = True
-#installopts = '--require-hashes'
+installopts = '--require-hashes'
 
 #
 # Sanity checking.

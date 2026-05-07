@@ -1,0 +1,14 @@
+easyblock = 'Bundle'
+
+name = 'GraalVM'
+version = '25'
+versionsuffix = '-LTS'
+
+homepage = 'https://www.graalvm.org/'
+description = """High-performance Java Development Kit (JDK) that enables ahead-of-time (AOT) compilation and polyglot application support for faster startup and lower runtime overhead."""
+
+toolchain = SYSTEM
+
+dependencies = [('GraalVM', '%(version)s.0.0')]
+
+moduleclass = 'lang'

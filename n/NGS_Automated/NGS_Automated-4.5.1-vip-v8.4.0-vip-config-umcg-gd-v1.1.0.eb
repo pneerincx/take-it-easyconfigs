@@ -1,7 +1,7 @@
 name = 'NGS_Automated'
-version = '4.4.0'
+version = '4.5.1'
 namelower = name.lower()
-versionsuffix = "-vip-v8.1.1-umcg-config-gd-v1.0.1"
+versionsuffix = "-vip-v8.4.0-vip-config-umcg-gd-v1.1.0"
 
 homepage = 'https://github.com/molgenis/NGS_Automated'
 description = """Various scripts to automate the NGS pipelines implemented in the MOLGENIS Compute framework. - VIP UMCG GD version"""
@@ -10,10 +10,9 @@ toolchain = SYSTEM
 easyblock = 'Bundle'
 
 dependencies = [
-    ('vip', 'v8.1.1'),
-    ('vip-umcg-config-gd', 'v1.0.1'),
-    ('NGS_Automated', '4.4.0','-bare'),
-    ('hashdeep', '4.4-20180907-18a6b5d','', ('GCCcore','11.3.0'))
+    ('vip', 'v8.4.0'),
+    ('vip-config-umcg-gd', 'v1.1.0'),
+    ('NGS_Automated', '4.5.1','-bare'),
 ]
 
 moduleclass = 'bio'

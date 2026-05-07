@@ -1,0 +1,36 @@
+easyblock = 'Waf'
+
+name = 'BGEN'
+version = '1.1.7'
+
+homepage = 'https://enkre.net/cgi-bin/code/bgen/'
+description = """a reference implementation of the BGEN format, written in C++.
+ The library can be used as the basis for BGEN support in other software,
+ or as a reference for developers writing their own implementations of the BGEN format."""
+
+toolchain = {'name': 'GCCcore', 'version': '13.3.0'}
+
+sources = [{
+    'source_urls': ['https://enkre.net/cgi-bin/code/bgen/tarball/6ac2d582f9/'],
+    'filename': 'BGEN-6ac2d582f9.tar.gz'
+}]
+patches = ['BGEN-1.1.7-streampos.patch']
+checksums = [
+    '121f5956f04ad174bc410fa7deed59e2ebff0ec818a3c66cf5d667357dddfb62',  # BGEN-6ac2d582f9.tar.gz
+    '61c05ae5f7363d5b7b6015f0a015b93f149dbda4b23b9f48f9517a6ce93d5869',  # BGEN-1.1.7-streampos.patch
+]
+
+builddependencies = [
+    ('Python', '3.12.3'),
+]
+
+sanity_check_paths = {
+    'files': [
+      'bin/bgenix',
+      'bin/cat-bgen',
+      'bin/edit-bgen',
+    ],
+    'dirs': [ ]
+}
+
+moduleclass = 'bio'
