@@ -5,7 +5,7 @@ versionsuffix='-bare'
 homepage = 'https://github.com/molgenis/NGS_Automated'
 description = """Various scripts to automate the NGS pipelines implemented in the MOLGENIS Compute framework."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 
 #

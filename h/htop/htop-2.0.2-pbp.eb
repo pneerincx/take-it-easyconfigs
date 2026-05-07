@@ -12,7 +12,7 @@ easyblock = 'ConfigureMake'
 # Therefore we do not need a toolchain @ runtime.
 # (We do need Autotools + a toolchain @ compiletime).
 #
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 
 #
 # Complete example URL: 

@@ -8,7 +8,7 @@ description = """SNP2HLA is a tool to impute amino acid polymorphisms
 and single nucleotide polymorphisms in human luekocyte antigenes (HLA) 
 within the major histocompatibility complex (MHC) region in chromosome 6."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 
 source_urls = ['http://software.broadinstitute.org/mpg/snp2hla/data/']
 sources = ['%s_package_%s.tar.gz' % (name,version)]

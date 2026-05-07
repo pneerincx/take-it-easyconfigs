@@ -13,7 +13,7 @@ assurance. Its robust architecture, powerful processing engine and
 high-performance computing features make it capable of taking on projects
 of any size."""
 
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 source_urls = ['https://software.broadinstitute.org/gatk/download/']
 sources = [{
     'download_filename': 'auth?package=GATK-archive&version=3.8-1-0-gf15c1c3ef',

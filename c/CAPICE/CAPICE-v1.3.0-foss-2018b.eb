@@ -28,7 +28,7 @@ checksums = [
 
 dependencies = [
     ('PythonPlus', '3.7.4', '-v20.02.1', ('foss', '2018b')),
-    ('Java', '11', '-LTS', ('dummy', ''))
+    ('Java', '11', '-LTS', SYSTEM)
 ]
 
 postinstallcmds = [

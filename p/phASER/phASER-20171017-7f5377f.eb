@@ -10,7 +10,7 @@ homepage = "https://github.com/secastel/phaser/"
 description = """Detection of Regulatory DNA Sequences using GRO-seq Data.
 """
 
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 
 # https://github.com/npklein/phaser/archive/7f5377f.zip
 source_urls = ['https://github.com/npklein/phaser/archive']

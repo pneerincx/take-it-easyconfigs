@@ -6,12 +6,11 @@ homepage = 'https://github.com/joerivandervelde/rvcf/releases/tag/v1.0'
 description = """This distribution already contains several pipelines/protocols/parameter files which you can use 'out-of-the-box' to align and impute your NGS data using MOLGENIS Compute."""
 
 #
-# Don't use 'dummy' as toolchain version to make sure dependencies are loaded
-# both at build as well as at runtime. With 'dummy' as toolchain version,
-# dependencies will only be loaded at runtime.
+# Don't use SYSTEM toolchain to make sure dependencies are loaded
+# both at build as well as at runtime.
+# Dependencies will only be loaded at runtime.
 #
-#toolchain = {'name': 'dummy', 'version': 'dummy'}
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 checksums = ['9badf5a2dbf5511dde294ba45f75532e']
 
 easyblock = 'Tarball'
@@ -22,7 +21,7 @@ javaver = '1.8.0_74'
 versionsuffix = '-%s-%s' % (java, javaver)
 dependencies = [
 	(java, javaver),
-	('CADD', 'v1.3', '', ('dummy', '')),
+	('CADD', 'v1.3', '', SYSTEM),
 ]
 #
 # Example URL:

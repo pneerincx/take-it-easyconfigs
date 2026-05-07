@@ -4,7 +4,7 @@ version = '0.1'
 homepage = 'https://github.com/molgenis/ngs-utils/releases/download/15.11.1/'
 description = """This distribution already contains several pipelines/protocols/parameter files which you can use 'out-of-the-box' to align and impute your NGS data using MOLGENIS Compute."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 ##https://github.com/molgenis/ngs-utils/releases/download/15.11.1/PPVforNIPT_0.1.tar.gz
 source_urls = [('https://github.com/molgenis/ngs-utils/releases/download/15.11.1/')]

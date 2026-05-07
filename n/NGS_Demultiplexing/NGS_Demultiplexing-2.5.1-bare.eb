@@ -5,7 +5,7 @@ versionsuffix = '-bare'
 homepage = 'https://github.com/molgenis/NGS_Demultiplexing'
 description = """This pipeline is for NGS demultiplexing"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 
 #dependencies

@@ -4,7 +4,7 @@ version = 'v17.04.1'
 homepage = 'https://github.com/molgenis/cluster-utils/'
 description = """Utilities for cluster users."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'CmdCp'
 
 #
@@ -21,7 +21,7 @@ checksums = ['f7bdff68e7482b2eaec50d4253a132b0']
 # * Technically htop is not a dependency, but we'd like to have it as part of the cluster-utils module.
 #
 dependencies = [
-    ('htop', '2.0.2', '-pbp', ('dummy', '')),
+    ('htop', '2.0.2', '-pbp', SYSTEM),
 ]
 
 keepsymlinks = True

@@ -15,7 +15,7 @@ description = """ SOAPfuse is an open source tool developed for genome-wide dete
  built only for x86_64 bit linux with Intel CPU with SSE instruction set
 """
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 
 #https://sourceforge.net/projects/soapfuse/files/SOAPfuse_Package/SOAPfuse-v1.27.tar.gz
 source_urls = ['https://sourceforge.net/projects/soapfuse/files/SOAPfuse_Package/']

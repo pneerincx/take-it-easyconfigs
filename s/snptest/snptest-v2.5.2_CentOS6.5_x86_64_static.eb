@@ -5,7 +5,7 @@ versionsuffix = '_CentOS6.5_x86_64_static'
 homepage = 'https://mathgen.stats.ox.ac.uk/genetics_software/snptest/snptest.html'
 description = """SNPTEST is a program for the analysis of single SNP association in genome-wide studies"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 
 #

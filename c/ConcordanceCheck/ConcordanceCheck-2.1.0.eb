@@ -4,7 +4,7 @@ namelower = name.lower()
 homepage = 'https://github.com/molgenis/ConcordanceCheck'
 description = """Various scripts to automate and execute the ConcordanceCheck implemented in the MOLGENIS Compute framework."""
 
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 
 #

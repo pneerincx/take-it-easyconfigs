@@ -4,7 +4,7 @@ version = '1'
 homepage = 'http://www.example.com/'
 description = """example"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'PackedBinary'
 
 # download manually from http://www.broadinstitute.org/gatk/download

@@ -4,7 +4,7 @@ version = '1.4.0'
 homepage = 'https://github.com/molgenis/systemsgenetics/releases/download/1.4.0_18-11.1'
 description = """"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 
 # download

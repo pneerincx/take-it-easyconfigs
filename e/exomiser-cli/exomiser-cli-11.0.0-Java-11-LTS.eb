@@ -4,7 +4,7 @@ version = '11.0.0'
 homepage = 'https://github.com/exomiser/Exomiser/'
 description = """The Exomiser - A Tool to Annotate and Prioritize Exome Variants"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'PackedBinary'
 
 source_urls = [('https://data.monarchinitiative.org/exomiser/latest/')]

@@ -5,7 +5,7 @@ homepage = 'https://github.com/imgag/ClinCNV'
 description = """A tool for large-scale CNV and CNA detection.
 Authors: G. Demidov, S. Ossowski. """
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'PackedBinary'
 
 #

@@ -5,7 +5,7 @@ namelower = name.lower()
 homepage = 'https://github.com/molgenis/molgenis-pipelines'
 description = """This distribution already contains several pipelines/protocols/parameter files for NGS data analysis with MOLGENIS Compute."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 
 #dependencies

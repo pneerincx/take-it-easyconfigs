@@ -4,7 +4,7 @@ version = '0.6.1p1'
 homepage = 'http://www-huber.embl.de/users/anders/HTSeq/doc/count.html'
 description = """Counting reads in features with htseq-count.Given a file with aligned sequencing reads and a list of genomic features, a common task is to count how many reads map to each feature."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 #easyblock = 'PackedBinary'
 easyblock = 'Tarball'
 #Tarball

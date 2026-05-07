@@ -1,4 +1,4 @@
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'JAR'
 
 name = 'beagle'
