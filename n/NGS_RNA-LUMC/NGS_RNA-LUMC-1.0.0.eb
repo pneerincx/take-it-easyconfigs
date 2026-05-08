@@ -5,7 +5,7 @@ namelower = name.lower()
 homepage = 'https://github.com/molgenis/molgenis-pipelines'
 description = """LUMC tool for RNA sequencing."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 
 #dependencies

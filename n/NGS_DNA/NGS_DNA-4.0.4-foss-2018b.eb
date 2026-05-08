@@ -49,8 +49,8 @@ dependencies = [
     ('multiqc', '1.11'),
     # ToDo: update the modules below.
     #('xhmm', '2016-01-04-cc14e528d909'),
-    #('CADD', 'v1.3', '', ('dummy', '')),
-    #('VEP', '90.5', '', ('dummy', '')),
+    #('CADD', 'v1.3', '', SYSTEM),
+    #('VEP', '90.5', '', SYSTEM),
 ]
 
 

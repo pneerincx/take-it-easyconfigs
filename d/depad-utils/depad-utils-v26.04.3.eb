@@ -1,5 +1,5 @@
 name = 'depad-utils'
-version = 'v23.04.1'
+version = 'v26.04.3'
 
 homepage = 'https://github.com/molgenis/depad-utils/'
 description = """Utilities for deploy admins to manage HPC environments."""
@@ -7,19 +7,15 @@ description = """Utilities for deploy admins to manage HPC environments."""
 toolchain = SYSTEM
 easyblock = 'CmdCp'
 
-#
-# Example URL:
-# https://github.com/molgenis/depad-utils/archive/v15.06.1.tar.gz
-# Private repo: download source manually
-#
 source_urls = [('https://github.com/molgenis/%s/archive/' % (name))]
 sources = [('%s.tar.gz' % (version))]
-checksums = ['9d2e512cce5f85b74949ee1359aa8700a077d7392da2a6fc083c360068e02d44']
+checksums = [('sha256', '7dc7c4d1812540f3b1cb2c1845ca3e4940cc6b330acf961c756560d6a241d340')]
 
 local_executables = [
     'GetPerlModuleDepTreeFromCPAN.pl',
     'generateEasyConfig.R',
     'hpc-environment-sync.bash',
+    'module-usage'
 ]
 
 files_to_copy = [
@@ -32,15 +28,15 @@ files_to_copy = [
 # We don't really need a command to install depad-utils, 
 # but as we have to have one in order to recycle the CmdCp easyblock... just ls.
 #
-cmds_map = [('.*', "echo 'Skipping install command.'")]]
+cmds_map = [('.*', "echo 'Skipping install command.'")]
 
 #
 # Make scripts executable.
 # (Mode may by masked by umask.)
 #
 postinstallcmds = [
-    'for executable in $(ls -1 %(installdir)s/bin/*.{bash,pl,py,R,sh} 2> /dev/null); do chmod 775 ${executable}; done',
-    'chmod -R g+rwX,o+rX,o-w %(installdir)s/*'
+    'chmod -R g+rwX,o+rX,o-w "%(installdir)s/"*',
+    'chmod a+x "%(installdir)s/bin/"* ',
 ]
 
 #

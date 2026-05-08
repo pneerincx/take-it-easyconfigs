@@ -5,7 +5,7 @@ namelower = name.lower()
 homepage = 'https://github.com/molgenis/molgenis-compute/'
 description = """A framework for large scale data and computational workflow management."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'PackedBinary'
 
 java = 'Java'

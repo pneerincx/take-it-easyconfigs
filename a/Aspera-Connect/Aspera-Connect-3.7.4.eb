@@ -6,7 +6,7 @@ version = '3.7.4'
 homepage = 'http://downloads.asperasoft.com/connect2/'
 description = """Commandline client for the high-speed Aspera data transfer protocol."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 
 source_urls = ['http://download.asperasoft.com/download/sw/connect/%(version)s/']
 sources = ['%(namelower)s-%(version)s.147727-linux-64.tar.gz']

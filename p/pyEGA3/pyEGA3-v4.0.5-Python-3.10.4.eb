@@ -7,7 +7,7 @@ versionsuffix = '-Python-%(pyver)s'
 homepage = 'https://github.com/Illumina/BeadArrayFiles'
 description = """Library to parse file formats related to Illumina bead arrays."""
 
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 
 source_urls = ['https://github.com/EGA-archive/ega-download-client/archive/']
 sources = ['%(version)s.tar.gz']

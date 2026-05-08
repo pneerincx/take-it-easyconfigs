@@ -5,7 +5,7 @@ namelower = name.lower()
 homepage = 'http://bioinform.github.io/varsim/'
 description = """A high-fidelity simulation validation framework for high-throughput genome sequencing with cancer applications."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 
 #dependencies

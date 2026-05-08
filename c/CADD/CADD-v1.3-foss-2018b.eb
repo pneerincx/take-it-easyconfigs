@@ -11,9 +11,8 @@ homepage = 'http://cadd.gs.washington.edu/home'
 description = """Tool for scoring the deleteriousness of variants in the human genome."""
 
 #
-# Don't use 'dummy' as toolchain version to make sure dependencies are loaded
-# both at build as well as at runtime. With 'dummy' as toolchain version,
-# dependencies will only be loaded at runtime.
+# Don't use SYSTEM toolchain to make sure dependencies are loaded
+# both at build as well as at runtime.
 #
 toolchain = {'name': 'foss', 'version': '2018b'}
 
@@ -23,7 +22,7 @@ dependencies = [
     ('SAMtools', '1.14'),
     ('PerlPlus', '5.22.0', '-v17.01.1'),
     ('Mozilla-CA', '20200520'),
-    ('VEP', '76', '', ('dummy', '')),
+    ('VEP', '76', '', SYSTEM),
 ]
 
 #

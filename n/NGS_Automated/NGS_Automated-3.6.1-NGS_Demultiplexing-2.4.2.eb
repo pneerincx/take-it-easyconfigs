@@ -6,7 +6,7 @@ versionsuffix = "-NGS_Demultiplexing-2.4.2"
 homepage = 'https://github.com/molgenis/NGS_Automated'
 description = """Various scripts to automate the NGS pipelines implemented in the MOLGENIS Compute framework."""
 
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 easyblock = 'Bundle'
 
 dependencies = [

@@ -9,7 +9,7 @@ description = """The Guava project contains several of Google's core libraries t
  primitives support, concurrency libraries, common annotations,
  string processing, I/O, and so forth."""
 
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 
 sources = ['%s-%s.jar' % (name.lower(), version)]
 source_urls = [('http://search.maven.org/remotecontent?filepath=com/google/' + name.lower() + '/' + name.lower() +'/' + version + '/')]

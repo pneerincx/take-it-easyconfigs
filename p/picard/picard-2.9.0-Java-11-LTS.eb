@@ -6,7 +6,7 @@ version = '2.9.0'
 homepage = 'https://broadinstitute.github.io/picard/'
 description = 'Java tools for working with next generation sequencing data in the BAM format.'
 
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 
 source_urls = ['https://github.com/broadinstitute/%(name)s/releases/download/%(version)s/']
 checksums = ['b711d492f16dfe0084d33e684dca2202']

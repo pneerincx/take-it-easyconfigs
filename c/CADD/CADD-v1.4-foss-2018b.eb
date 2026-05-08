@@ -13,8 +13,8 @@ Tool for scoring the deleteriousness of variants in the human genome(v1.4).
 """
 
 #
-# Don't use 'dummy' as toolchain version to make sure dependencies are loaded
-# both at build as well as at runtime. With 'dummy' as toolchain version,
+# Don't use SYSTEM toolchain to make sure dependencies are loaded
+# both at build as well as at runtime.
 # dependencies will only be loaded at runtime.
 #
 toolchain = {'name': 'foss', 'version': '2018b'}

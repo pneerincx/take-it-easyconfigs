@@ -5,12 +5,12 @@ homepage = 'https://github.com/bxlab/metaWRAP'
 description = """A flexible pipeline for genome-resolved metagenomic data analysis."""
 
 #
-# Don't use 'dummy' as toolchain version to make sure dependencies are loaded
-# both at build as well as at runtime. With 'dummy' as toolchain version,
+# Don't use SYSTEM toolchain to make sure dependencies are loaded
+# both at build as well as at runtime.
 # dependencies will only be loaded at runtime.
 #
-#toolchain = {'name': 'dummy', 'version': 'dummy'}
-toolchain = {'name': 'dummy', 'version': ''}
+#toolchain = SYSTEM
+toolchain = SYSTEM
 easyblock = 'PackedBinary'
 
 #

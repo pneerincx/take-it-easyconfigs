@@ -7,7 +7,7 @@ versionsuffix = '-20230813'
 homepage = 'https://www.cog-genomics.org/plink/2.0/'
 description = 'Whole-genome association analysis toolset.'
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 
 ## COPIED zip file from sugarsnax /apps/sources/p/PLINK/
 

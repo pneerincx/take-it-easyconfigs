@@ -5,7 +5,7 @@ versionsuffix = '-Java-%(javaver)s-LTS'
 homepage = 'https://github.com/molgenis/vibe/'
 description = """Command-line application to to generate prioritized genes using phenotype information"""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'Binary'
 
 sources = [{

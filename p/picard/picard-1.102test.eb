@@ -5,7 +5,7 @@ homepage = 'http://sourceforge.net/projects/picard'
 description = """A set of tools (in Java) for working with next generation sequencing data in the BAM format."""
 
 versionsuffix = 'test'
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 
 source_urls = ['http://sourceforge.net/projects/picard/files/picard-tools/%(version)s']
 sources = ['picard-tools-%(version)s.zip']

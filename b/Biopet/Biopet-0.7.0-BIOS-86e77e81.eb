@@ -8,7 +8,7 @@ the LUMC Sequencing Analysis Support Core team. It contains our main pipelines a
 line tools we develop in-house. It is meant to be used in the main SHARK computing cluster. While usage 
 outside of SHARK is technically possible, some adjustments may need to be made in order to do so."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'JAR'
 
 #

@@ -4,7 +4,7 @@ version = '0.11.0_rc1-static-amd64'
 homepage = 'http://wkhtmltopdf.org/downloads.html'
 description = """Command line tool to render HTML. """
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM
 easyblock = 'PackedBinary'
 
 #
