@@ -1,0 +1,43 @@
+name = 'ConcordanceCheck'
+version = '3.0.0'
+namelower = name.lower()
+homepage = 'https://github.com/molgenis/ConcordanceCheck'
+description = """Various scripts to automate and execute the ConcordanceCheck implemented in the MOLGENIS Compute framework."""
+
+toolchain = SYSTEM
+easyblock = 'Tarball'
+
+#
+# Example URL: https://github.com/molgenis/ConcordanceCheck/archive/2.2.0.tar.gz
+# 
+source_urls = [('http://github.com/molgenis/%s/archive/' % (name))]
+sources = [('%s.tar.gz' % (version))]
+
+checksums = ['ed6fa5f6aefed84519222e005f67dd143dd3d605be45dc9850533881828f165b']
+
+dependencies = [
+       ('CompareGenotypeCalls', '1.8.1', '-Java-8-LTS', ('system', '')),
+       ('HTSlib', '1.16','',('GCCcore','11.3.0')),
+       ('nextflow', '23.10.1', '-Java-11-LTS', ('system', '')),
+       ('array-as-vcf', '1.1.0', '-Python-3.10.4',('GCCcore','11.3.0')),
+       ('picard', '2.26.10', '-Java-8-LTS', ('system', '')),
+]
+
+sanity_check_paths = {
+    'files': [
+        'bin/ConcordanceCheck.sh',
+        'bin/ParseDarwinSamplesheet.sh',
+        'bin/copyConcordanceCheckData.sh',
+        'bin/notifications.sh',
+        'nextflow/main.nf',
+        'nextflow/nextflow.config',
+        'etc/sharedConfig.cfg',
+        'lib/sharedFunctions.bash',
+    ],
+    'dirs': [
+        'etc/cron.d',
+        'nextflow',
+    ]
+}
+
+moduleclass = 'bio'
