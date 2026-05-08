@@ -9,15 +9,36 @@ files which you can use 'out-of-the-box' to align and impute your NGS data using
 toolchain = {'name': 'foss', 'version': '2022a'}
 easyblock = 'Tarball'
 
-dependencies = [
-    ('Molgenis-Compute', '20.03.1', '-Java-11-LTS', ('system', ''))]
-
 #
 # Example URL: https://github.com/molgenis/molgenis-pipelines/releases/download/NGS_RNA-3.2.1/NGS_RNA-3.2.2.tar.gz
 #
 source_urls = [('https://github.com/molgenis/NGS_RNA/archive/refs/tags/') ]
 sources = [('%s.tar.gz' % (version))]
-checksums = ['b659c4d80497081115637c95c5ae9542ecf033b35ca23d1cc50fe26e92bfad4f']
+checksums = ['9a539496ce2a7f986b5bedc7630346c6872d65aa421f822adda56c10ac0193a4']
+
+#
+# Dependencies.
+#
+dependencies = [
+    ('Molgenis-Compute', '20.03.1', '-Java-11-LTS', ('system', '')),
+    ('FastQC', '0.11.9', '-Java-11-LTS'),
+    ('GATK', '4.2.4.1', '-Java-8-LTS'),
+    ('ngs-utils', '22.10.1','', ('system', '')),
+    ('BEDTools', '2.30.0'),
+    ('BCFtools', '1.16'),
+    ('sambamba', '0.7.0','', ('system', '')),
+    ('picard', '2.26.10', '-Java-8-LTS'),
+    ('SAMtools', '1.16.1'),
+    ('HTSeq', '0.12.3', '-Python-3.10.4'),
+    ('HTSlib', '1.16'),
+    ('PythonPlus', '3.10.4', '-v23.01.1'),
+    ('STAR', '2.7.9a, '', '('GCC', '11.3.0'),
+    ('TrimGalore', '0.6.7'),
+    ('RSeQC', '3.0.1', '-Python-3.10.4'),
+    ('R', '4.4.0'),
+    ('RegTools', '0.5.2'),
+    ('NGS_RNA_RDepBundle', 'v24.05.1')),
+]
 
 sanity_check_paths = {
     'files': ['workflow_STAR.csv', 'parameters.csv'],
