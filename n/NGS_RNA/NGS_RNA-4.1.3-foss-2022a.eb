@@ -35,7 +35,7 @@ dependencies = [
     ('STAR', '2.7.9a'),
     ('TrimGalore', '0.6.7'),
     ('RSeQC', '3.0.1', '-Python-3.10.4'),
-    ('R', '4.4.0'),
+    ('R', '4.4.0', '-bare'),
     ('RegTools', '0.5.2'),
     ('NGS_RNA_RDepBundle', 'v24.05.1'),
 ]
