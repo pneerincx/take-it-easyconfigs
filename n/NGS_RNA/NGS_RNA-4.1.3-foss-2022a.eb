@@ -1,6 +1,5 @@
 name = 'NGS_RNA'
 version = '4.1.3'
-namelower = name.lower()
 
 homepage = 'https://github.com/molgenis/molgenis-pipelines'
 description = """This distribution already contains several pipelines/protocols/parameter 
