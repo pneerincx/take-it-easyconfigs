@@ -20,13 +20,13 @@ checksums = ['9a539496ce2a7f986b5bedc7630346c6872d65aa421f822adda56c10ac0193a4']
 # Dependencies.
 #
 dependencies = [
-    ('Molgenis-Compute', '20.03.1', '-Java-11-LTS', ('system', '')),
-    ('FastQC', '0.11.9', '-Java-11-LTS'),
-    ('GATK', '4.2.4.1', '-Java-8-LTS'),
-    ('ngs-utils', '22.10.1','', ('system', '')),
+    ('Molgenis-Compute', '20.03.1', '-Java-11-LTS', SYSTEM),
+    ('FastQC', '0.11.9', '-Java-11-LTS', SYSTEM),
+    ('GATK', '4.2.4.1', '-Java-8-LTS', SYSTEM),
+    ('ngs-utils', '22.10.1','', SYSTEM),
     ('BEDTools', '2.30.0'),
     ('BCFtools', '1.16'),
-    ('sambamba', '0.7.0','', ('system', '')),
+    ('sambamba', '0.7.0','', SYSTEM),
     ('picard', '2.26.10', '-Java-8-LTS'),
     ('SAMtools', '1.16.1'),
     ('HTSeq', '0.12.3', '-Python-3.10.4'),
