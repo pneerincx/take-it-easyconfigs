@@ -27,7 +27,7 @@ dependencies = [
     ('BEDTools', '2.30.0'),
     ('BCFtools', '1.16'),
     ('sambamba', '0.7.0','', SYSTEM),
-    ('picard', '2.26.10', '-Java-8-LTS'),
+    ('picard', '2.26.10', '-Java-8-LTS', SYSTEM),
     ('SAMtools', '1.16.1'),
     ('HTSeq', '0.12.3', '-Python-3.10.4'),
     ('HTSlib', '1.16'),
