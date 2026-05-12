@@ -4,7 +4,7 @@ version = '1.6'
 homepage = 'https://stedolan.github.io/jq/'
 description = """jq is a lightweight and flexible command-line JSON processor. """
 
-toolchain = {'name': 'system', 'version': ''}
+toolchain = SYSTEM
 easyblock = 'Binary'
 
 source_urls = [('https://github.com/stedolan/jq/releases/download/jq-%s/' % (version)) ]

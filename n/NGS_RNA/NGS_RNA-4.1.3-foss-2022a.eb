@@ -1,6 +1,5 @@
 name = 'NGS_RNA'
 version = '4.1.3'
-namelower = name.lower()
 
 homepage = 'https://github.com/molgenis/molgenis-pipelines'
 description = """This distribution already contains several pipelines/protocols/parameter 
@@ -20,14 +19,14 @@ checksums = ['9a539496ce2a7f986b5bedc7630346c6872d65aa421f822adda56c10ac0193a4']
 # Dependencies.
 #
 dependencies = [
-    ('Molgenis-Compute', '20.03.1', '-Java-11-LTS', ('system', '')),
-    ('FastQC', '0.11.9', '-Java-11-LTS'),
-    ('GATK', '4.2.4.1', '-Java-8-LTS'),
-    ('ngs-utils', '22.10.1','', ('system', '')),
+    ('Molgenis-Compute', '20.03.1', '-Java-11-LTS', SYSTEM),
+    ('FastQC', '0.11.9', '-Java-11-LTS', SYSTEM),
+    ('GATK', '4.2.4.1', '-Java-8-LTS', SYSTEM),
+    ('ngs-utils', '22.10.1','', SYSTEM),
     ('BEDTools', '2.30.0'),
     ('BCFtools', '1.16'),
-    ('sambamba', '0.7.0','', ('system', '')),
-    ('picard', '2.26.10', '-Java-8-LTS'),
+    ('sambamba', '0.7.0','', SYSTEM),
+    ('picard', '2.26.10', '-Java-8-LTS', SYSTEM),
     ('SAMtools', '1.16.1'),
     ('HTSeq', '0.12.3', '-Python-3.10.4'),
     ('HTSlib', '1.16'),
@@ -35,7 +34,7 @@ dependencies = [
     ('STAR', '2.7.9a'),
     ('TrimGalore', '0.6.7'),
     ('RSeQC', '3.0.1', '-Python-3.10.4'),
-    ('R', '4.4.0'),
+    ('R', '4.4.0', '-bare'),
     ('RegTools', '0.5.2'),
     ('NGS_RNA_RDepBundle', 'v24.05.1'),
 ]

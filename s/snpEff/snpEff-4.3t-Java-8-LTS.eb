@@ -7,7 +7,7 @@ homepage = 'http://sourceforge.net/projects/snpeff/'
 description = """SnpEff is a variant annotation and effect prediction tool. 
 It annotates and predicts the effects of genetic variants (such as amino acid changes)."""
 
-toolchain = {'name': 'system', 'version': ''}
+toolchain = SYSTEM
 
 local_java = 'Java'
 local_javaver = '8-LTS'

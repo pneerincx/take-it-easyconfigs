@@ -13,7 +13,7 @@ description = """
 Tool for scoring the deleteriousness of variants in the human genome(v1.4).
 """
 
-toolchain = {'name': 'system', 'version': ''}
+toolchain = SYSTEM
 
 #
 # Example URL: 

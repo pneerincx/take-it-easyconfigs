@@ -6,7 +6,7 @@ version = 'v1.1.0'
 homepage = "" #required variable
 description = """Variant Interpretation Pipeline configuration for UMCG Genome Diagnostics"""
 
-toolchain = {'name': 'system', 'version': ''}
+toolchain = SYSTEM
 
 #https://github.com/molgenis/vip-config-umcg-gd/archive/refs/tags/
 source_urls = [('https://github.com/molgenis/%s/archive/refs/tags/' % (name))]

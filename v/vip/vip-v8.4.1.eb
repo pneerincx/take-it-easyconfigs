@@ -6,7 +6,7 @@ version = 'v8.4.1'
 homepage = 'https://vip.molgeniscloud.org/'
 description = """Variant Interpretation Pipeline"""
 
-toolchain = {'name': 'system', 'version': ''}
+toolchain = SYSTEM
 
 dependencies = [
     ('Java', '21-LTS'),
