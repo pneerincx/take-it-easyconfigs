@@ -4,7 +4,7 @@ version = '1.8.1'
 homepage = 'https://download.molgeniscloud.org/downloads/'
 description = """"""
 
-toolchain = {'name': 'system', 'version': ''}
+toolchain = SYSTEM
 easyblock = 'Tarball'
 
 # download

@@ -4,7 +4,7 @@ version = '22.10.1'
 homepage = 'https://github.com/molgenis/ngs-utils'
 description = """Collection of notes and scripts related to NGS """
 
-toolchain = {'name': 'system', 'version': ''}
+toolchain = SYSTEM
 easyblock = 'PackedBinary'
 
 #

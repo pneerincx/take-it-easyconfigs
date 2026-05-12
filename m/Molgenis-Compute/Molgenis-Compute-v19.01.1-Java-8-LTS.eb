@@ -6,7 +6,7 @@ homepage = 'https://github.com/molgenis/molgenis-compute/'
 description = """MOLGENIS Compute is a framework for large scale data and 
 computational workflow management in a distributed execution environment."""
 
-toolchain = {'name': 'system', 'version': ''}
+toolchain = SYSTEM
 easyblock = 'PackedBinary'
 
 java = 'Java'
