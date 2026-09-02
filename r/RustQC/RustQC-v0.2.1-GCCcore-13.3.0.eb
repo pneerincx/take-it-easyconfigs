@@ -1,7 +1,7 @@
 easyblock = 'Cargo'
 
 name = 'RustQC'
-version = 'v0.2.1'
+version = '0.2.1'
 
 homepage = 'https://github.com/seqeralabs/rustqc'
 description = 'Fast genomics quality control suite for sequencing data written in Rust.'
@@ -9,8 +9,8 @@ description = 'Fast genomics quality control suite for sequencing data written i
 toolchain = {'name': 'GCCcore', 'version': '13.3.0'}
 
 source_urls = [GITHUB_RELEASE]
-sources = [SOURCE_TAR_GZ]
-#sources = [{'download_filename': '%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}]
+#sources = [V_VERSION_TAR_GZ]
+sources = [{'download_filename': V_VERSION_TAR_GZ, 'filename': SOURCE_TAR_GZ}]
 
 checksums = [
 	('sha256', 'ae8036a60aeba4b68b335a23ef6f0b7468a24b8c4cc42c0dad74f1c423fb7f89'),  # RustQC-0.2.1.tar.gz
