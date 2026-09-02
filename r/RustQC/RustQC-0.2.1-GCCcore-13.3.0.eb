@@ -20,6 +20,8 @@ builddependencies = [
 	('Rust', '1.86.0'),
 ]
 
+offline = False
+
 #dependencies = [
 #
 #]
