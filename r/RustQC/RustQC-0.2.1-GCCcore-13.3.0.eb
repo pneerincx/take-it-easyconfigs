@@ -8,9 +8,7 @@ description = 'Fast genomics quality control suite for sequencing data written i
 
 toolchain = {'name': 'GCCcore', 'version': '13.3.0'}
 
-github_account = 'seqeralabs'
-source_urls = [GITHUB_RELEASE]
-#sources = [V_VERSION_TAR_GZ]
+source_urls = ['https://github.com/seqeralabs/RustQC/archive/refs/tags/']
 sources = [{'download_filename': V_VERSION_TAR_GZ, 'filename': SOURCE_TAR_GZ}]
 
 checksums = [
