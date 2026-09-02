@@ -31,12 +31,12 @@ builddependencies = [
 #rust_cargo_parallel = True
 
 sanity_check_paths = {
-  'files': ['bin/rustqc'],
-  'dirs': [],
+	'files': ['bin/rustqc'],
+	'dirs': [],
 }
 
 sanity_check_commands = [
-  'rustqc --help',
+	'rustqc --help',
 ]
 
 moduleclass = 'bio'
