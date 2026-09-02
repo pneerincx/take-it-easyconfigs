@@ -1,0 +1,42 @@
+easyblock = 'Cargo'
+
+name = 'RustQC'
+version = 'v0.2.1'
+
+homepage = 'https://github.com/seqeralabs/rustqc'
+description = 'Fast genomics quality control suite for sequencing data written in Rust.'
+
+toolchain = {‘name’: ‘GCCcore’, ‘version’: ‘13.3.0’}
+
+source_urls = [GITHUB_SOURCE]
+sources = [{'download_filename': '%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}]
+
+checksums = [
+	('sha256', 'ae8036a60aeba4b68b335a23ef6f0b7468a24b8c4cc42c0dad74f1c423fb7f89'),  # RustQC-0.2.1.tar.gz
+]
+
+builddependencies = [
+	(‘binutils’, ‘2.42’),
+	(‘Rust’, ‘1.86.0’),
+]
+
+#dependencies = [
+#
+#]
+
+#files_to_copy = [
+#	([‘rustqc’], ‘bin’),
+#]
+
+#rust_cargo_parallel = True
+
+sanity_check_paths = {
+  ‘files’: [‘bin/rustqc’],
+  ‘dirs’: [],
+}
+
+sanity_check_commands = [
+  ‘rustqc --help’,
+]
+
+moduleclass = ‘bio’
